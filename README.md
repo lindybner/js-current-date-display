@@ -1,4 +1,4 @@
-# js-current-date-display
+# JavaScript Display Current Date Exercise
 
 **Exercise**: Write a JavaScript program to get the current date.
 
