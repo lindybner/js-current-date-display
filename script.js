@@ -1,37 +1,10 @@
 // var
 const output = document.querySelector("#output");
 const newDate = new Date();
-let mm;
-let dd;
-let yyyy;
-let outputDate;
+const mm = String(newDate.getMonth() + 1).padStart(2, "0");
+const dd = String(newDate.getDate()).padStart(2, "0");
+const yyyy = newDate.getFullYear();
+const outputDate = `${mm}-${dd}-${yyyy}, ${mm}/${dd}/${yyyy}`;
 
-// fn
-function setMonth() {
-  mm = newDate.getMonth;
-  return mm;
-}
-
-function setDay() {
-  dd = newDate.getDate;
-  return dd;
-}
-
-function setYear() {
-  yyyy = newDate.getFullYear;
-  return yyyy;
-}
-
-// set outputDate
-function setOutPutDate(mm, dd, yyyy) {
-  outputDate = `${mm}-${dd}-${yyyy}`;
-  return outputDate;
-}
-
-// output date to output
-function outputDate(outputDate) {
-  output.innerHTML = outputDate;
-}
-
-// call outputDate fn
-outputDate();
+// output
+output.innerHTML = outputDate;
